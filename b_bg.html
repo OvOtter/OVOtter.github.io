@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Cormorant+SC:wght@700&family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <script src="bg_b.js"></script>
+    <title>a</title>
+    <style>
+      #aa{
+          position:fixed;
+          width:20vw;
+          right:15vw;
+          bottom:45.2vh;
+          z-index: 20;
+      }
+      #move{
+        position:fixed;
+        width:10vw;
+        right:0vw;
+        top:0vw;
+        margin: 7vw;
+        text-shadow: 1px 1px 1px grey;
+        font-size:1.2vw;
+        border:none;
+        font-family: papyrus;
+        background-color: white;
+        box-shadow: 1px 3px 10px grey;
+        z-index: 20;
+        line-height: 95%;
+        display: none;
+      }
+      #movewords{
+        position:fixed;
+        width:10vw;
+        right:0vw;
+        top:0vw;
+        margin: 7vw;
+        text-shadow: 1px 1px 1px grey;
+        font-size:1.2vw;
+        border:none;
+        font-family: papyrus;
+        background-color: white;
+        box-shadow: 1px 3px 10px grey;
+        z-index: 20;
+        line-height: 95%;
+        display: none;
+      }
+      @keyframes typing {
+        from {width:0}
+        to{width:100%;}
+      }
+      #first,#second,#third,#four,#five,#sixth,#seven,#eight,#nine,#ten{
+        position:fixed;
+        overflow:hidden;
+        white-space: nowrap;
+        margin: 0 auto;
+        margin-bottom: 1vw;
+        display: none;
+        font-family: 'Mochiy Pop One', sans-serif;
+        font-size:2vh;
+        text-align: left;
+        left:12vw;
+        width:76vw;
+        z-index: 40;
+        animation:typing 2s steps(40,end);
+
+      }
+      #first,#second,#third,#four,#five,#sixth,#seven,#eight,#nine,#ten:hover{
+        cursor:pointer;
+        /* font-size: 2vw; */
+      }
+      #first{
+        top:57vh;
+      }
+      #second{
+        top:60.5vh;
+      }
+      #third{
+        top:64vh;
+      }
+      #four{
+        top:67.5vh;
+      }
+      #five{
+        top:71vh;
+      }
+      #sixth{
+        top:74.5vh;
+      }
+      #seven{
+        top:78vh;
+      }
+      #eight{
+        top:81.5vh;
+      }
+      #nine{
+        top:85vh;
+      }
+      #ten{
+        top: 88.5vh;
+      }
+    </style>
+</head>
+<body>
+    <img id=aa src="b.png">
+    <div id = move>
+    <p>If you can move me, I don't mind revealing my thoughts :)</p>
+  </div>
+  <div id = movewords>
+  <p>If you can get my words, I don't mind sharing more :)</p>
+</div>
+    <p id = first>&#128534; Parents are on a business trip again. Let me set my alarm earlier.</p>
+    <p id=second>&#128522; 20 minutes should be enough to get breakfast ready for both my sister and myself!</p>
+    <p id=third>&#128534; Ahhh I wish my parents could stay at home more.........</p>
+    <p id=four>&#128522; But they work so hard just for the family - I shouldn't complain about that!</p>
+    <p id=five>&#128522; Fortunately, my sister and I have good grades, so they don't have to worry.</p>
+    <p id=sixth> &#129300; Oh yeah they told me to get well with classmates before leaving. </p>
+    <p id=seven> &#128534; Everyone in the class is nice but I just find it hard to approach them. </p>
+    <p id=eight> &#128534; I did talk to them when they asked for homework help, but other times...</p>
+    <p id=nine> &#129300; Hmm I guess I should try to talk to others more today..?</p>
+    <p id=ten> &#128522; Time to get out of my comfort zone! </p>
+</body>
+</html>

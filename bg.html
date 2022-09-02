@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="bg.js"></script>
+    <link rel = "shortcut icon" href = "shinji.png">
+    <title>Let's meet...</title>
+    <style>
+    body{
+      position:absolute;
+      height:100vw;
+      background-image: url(dog.gif);
+      /* https://i.gifer.com/8GQ1.gif */
+    }
+      #left{
+        position:fixed;
+        width:100vw;
+        border:none;
+        height:100vh;
+        top:0vw;
+        left:0vw;
+        z-index: 20;
+      }
+      #right{
+        position:fixed;
+        width:100vw;
+        border:none;
+        right:0vw;
+        height:100vh;
+        z-index: 20;
+      }
+      #dialogue{
+        position:fixed;
+        height:36vh;
+        width:80vw;
+        left:10vw;
+        bottom:5vh;
+        border:solid 2vh;
+        z-index: 10;
+        background-color: white;
+      }
+      #lefthalf{
+          position: fixed;
+          height:50vh;
+          width:20vw;
+          left:30vw;
+          z-index:20;
+      }
+      #righthalf{
+          position: fixed;
+          height:50vh;
+          width:20vw;
+          right:30vw;
+          z-index:20;
+      }
+      #next{
+        position:fixed;
+        bottom: 45vh;
+        width:10vw;
+        left:45vw;
+        display: none;
+        z-index: 80;
+      }
+    </style>
+
+  </head>
+  <body>
+    <iframe id = left src = "a_bg.html"></iframe>
+    <iframe id = right src = "b_bg.html"></iframe>
+    <a href = "seat.html"><img id = next src="porcupines.png"></a>
+    <div id = dialogue>
+    </div>
+    <div id=lefthalf>
+
+    </div>
+    <div id=righthalf>
+
+    </div>
+  </body>
+</html>

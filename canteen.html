@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel = "shortcut icon" href = "shinji.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Cormorant+SC:wght@700&family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <script src="canteen.js"></script>
+    <title>It's Lunchtime</title>
+    <style media="screen">
+    img{
+      position: fixed;
+      width:8vw;
+      left:46vw;
+      bottom:67vh;
+    }
+    img:hover{
+      transform:rotateX(20deg);
+    }
+      html{
+        height:100%;
+        width:100%;
+      }
+      body{
+        background-color:white;
+        background-image: url("canteen2.jpg");
+        width:100%;
+        height:100%
+        bottom:0vh;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+      #a{
+        position:fixed;
+        left:28vw;
+        bottom:56vh;
+        width:15vw;
+        animation:mymove ease-out 2s 1;
+      }
+      #b{
+        position:fixed;
+        width:20vw;
+        left:60vw;
+        bottom:15vh;
+      }
+      #a:hover{
+        transform: none;
+      }
+      #b:hover{
+        transform: none;
+      }
+      @keyframes mymove{
+        from{left:-20vw;}
+        to{left:28vw;}
+      }
+      @keyframes typing {
+        from {width:0}
+        to{width:100%;}
+      }
+      #b2,#b3,#b4,#b5,#b6,#b7,#b8,#b9,#b10,#b11,#b12,#b13,#b14,#b15,#b16,#b17,#b18,#b19,#b20,#b21,#b22,#b23,#b24,#b25,#b26,#b27,#b28,#b29{
+        display: none;
+      }
+      #b30,#b31,#b32,#b33,#b34,#b35,#b36,#b37,#b38,#b39,#b40,#b41,#b42,#b43,#b44,#b45,#b46,#b47,#b48,#b49,#b50,#b51,#b52,#b53,#b54,#b55{
+        display: none;
+      }
+      #b56,#b57,#b58{display: none;}
+      #d1,#d3,#d5,#d12,#d13,#d14,#d15,#d16,#d17,#d18,#d20,#d21,#d28,#d29,#d30,#d31,#d33,#d36,#d38,#d40,#d42,#d43,#d45,#d46{
+        position:fixed;
+        font-size:2.5vh;
+        font-family: 'Mochiy Pop One', sans-serif;
+        overflow:hidden;
+        white-space: nowrap;
+        margin: 0 auto;
+        margin-bottom: 1vw;
+        animation:typing 2s steps(40,end);
+        display:none;
+        bottom:88vh;
+        color:black;
+        left:3vw;
+        text-shadow: 1px 1px 10px #0099ff;
+      }
+      #d2,#d4,#d6,#d10,#d11,#d19,#d22,#d23,#d24,#d25,#d26,#d27,#d32,#d34,#d35,#d37,#d39,#d41,#d44,#d47{
+        position:fixed;
+        font-size:2.5vh;
+        font-family: 'Mochiy Pop One', sans-serif;
+        overflow:hidden;
+        white-space: nowrap;
+        margin: 0 auto;
+        margin-bottom: 1vw;
+        animation:typing 2s steps(40,end);
+        display:none;
+        bottom:60vh;
+        color:black;
+        left:67vw;
+        text-shadow: 1px 1px 10px #0099ff;
+      }
+      #p44{
+        bottom:52vh;
+        left:45vw;
+        width:5vw;
+        transform:none;
+        display: none;
+      }
+      #p43{
+        bottom:52vh;
+        left:47vw;
+        width:5vw;
+        transform:none;
+        display: none;
+      }
+      #p41{
+        bottom:52vh;
+        left:49vw;
+        width:5vw;
+        transform:none;
+        display: none;
+      }
+      #p40{
+        bottom:52vh;
+        left:51vw;
+        width:5vw;
+        transform:none;
+        display: none;
+      }
+      #p38{
+        bottom:52vh;
+        left:53vw;
+        width:5vw;
+        transform:none;
+        display: none;
+      }
+      #p36{
+        bottom:54vh;
+        left:53vw;
+        width:5vw;
+        transform:none;
+        display: none;
+      }
+      #p34{
+        bottom:54vh;
+        left:51vw;
+        width:5vw;
+        transform:none;
+        display: none;
+      }
+      #p45{
+        bottom:38vh;
+        left:48vw;
+        width:8vw;
+        transform:none;
+        display: none;
+      }
+      #p42{
+        bottom:38vh;
+        left:45vw;
+        width:8vw;
+        transform:none;
+        display: none;
+      }
+      #p39{
+        bottom:36vh;
+        left:45vw;
+        width:8vw;
+        transform:none;
+        display: none;
+      }
+      #p37{
+        bottom:36vh;
+        left:48vw;
+        width:8vw;
+        transform:none;
+        display: none;
+      }
+      #p35{
+        bottom:36vh;
+        left:51vw;
+        width:8vw;
+        transform:none;
+        display: none;
+      }
+      #p33{
+        bottom:36vh;
+        left:54vw;
+        width:8vw;
+        transform:none;
+        display: none;
+      }
+      #p32{
+        bottom:36vh;
+        left:57vw;
+        width:8vw;
+        transform:none;
+        display: none;
+      }
+      #p31{
+        bottom:54vh;
+        left:49vw;
+        width:5vw;
+        transform:none;
+        display: none;
+      }
+      #p30{
+        bottom:34vh;
+        left:57vw;
+        width:8vw;
+        transform:none;
+        display: none;
+      }
+      #p29{
+        bottom:54vh;
+        left:47vw;
+        width:5vw;
+        transform:none;
+        display: none;
+      }
+      #p28{
+        bottom:54vh;
+        left:45vw;
+        width:5vw;
+        transform:none;
+        display: none;
+      }
+      #p27{
+        bottom:54vh;
+        left:43vw;
+        width:5vw;
+        transform:none;
+        display: none;
+      }
+      #p26{
+        bottom:56vh;
+        left:43vw;
+        width:5vw;
+        transform:none;
+        display: none;
+      }
+      #p25{
+        bottom:34vh;
+        left:54vw;
+        width:8vw;
+        transform:none;
+        display: none;
+      }
+      #p24{
+        bottom:34vh;
+        left:51vw;
+        width:8vw;
+        transform:none;
+        display: none;
+      }
+      #p23{
+        bottom:34vh;
+        left:48vw;
+        width:8vw;
+        transform:none;
+        display: none;
+      }
+      #p22{
+        bottom:34vh;
+        left:45vw;
+        width:8vw;
+        transform:none;
+        display: none;
+      }
+      #p21{
+        bottom:32vh;
+        left:45vw;
+        width:8vw;
+        transform:none;
+        display: none;
+      }
+      #p20{
+        bottom:32vh;
+        left:48vw;
+        width:8vw;
+        transform:none;
+        display: none;
+      }
+      #p19{
+        bottom:56vh;
+        left:45vw;
+        width:5vw;
+        transform:none;
+        display: none;
+      }
+      #p18{
+        bottom:56vh;
+        left:47vw;
+        width:5vw;
+        transform:none;
+        display: none;
+      }
+      #p17{
+        bottom:32vh;
+        left:51vw;
+        width:8vw;
+        transform:none;
+        display: none;
+      }
+      #p16{
+        bottom:56vh;
+        left:49vw;
+        width:5vw;
+        transform:none;
+        display: none;
+      }
+      #p15{
+        bottom:56vh;
+        left:51vw;
+        width:5vw;
+        transform:none;
+        display: none;
+      }
+      #p14{
+        bottom:56vh;
+        left:53vw;
+        width:5vw;
+        transform:none;
+        display: none;
+      }
+      #p13{
+        bottom:58vh;
+        left:53vw;
+        width:5vw;
+        transform:none;
+        display: none;
+      }
+      #p11{
+        bottom:58vh;
+        left:51vw;
+        width:5vw;
+        transform:none;
+        display: none;
+      }
+      #p12{
+        bottom:58vh;
+        left:49vw;
+        width:5vw;
+        transform:none;
+        display: none;
+      }
+      #p10{
+        bottom:32vh;
+        left:54vw;
+        width:8vw;
+        transform:none;
+        display: none;
+      }
+      #p9{
+        bottom:32vh;
+        left:57vw;
+        width:8vw;
+        transform:none;
+        display: none;
+      }
+      #p8{
+        bottom:30vh;
+        left:57vw;
+        width:8vw;
+        transform:none;
+        display: none;
+      }
+      #p6{
+        bottom:30vh;
+        left:51vw;
+        width:8vw;
+        transform:none;
+        display: none;
+      }
+      #p7{
+        bottom:30vh;
+        left:54vw;
+        width:8vw;
+        transform:none;
+        display: none;
+      }
+      #p5{
+        bottom:58vh;
+        left:47vw;
+        width:5vw;
+        transform:none;
+        display: none;
+      }
+      #p4{
+        bottom:30vh;
+        left:48vw;
+        width:8vw;
+        transform:none;
+        display: none;
+      }
+      #p3{
+        bottom:58vh;
+        left:45vw;
+        width:5vw;
+        transform:none;
+        display: none;
+      }
+      #p2{
+        bottom:30vh;
+        left:45vw;
+        width:8vw;
+        transform:none;
+        display: none;
+      }
+      #p1{
+        bottom: 58vh;
+        left:43vw;
+        width:5vw;
+        transform: none;
+        display: none;
+      }
+      #d7,#d8,#d9{
+        position:absolute;
+        bottom:60vh;
+        width: 25vw;
+        left:65vw;
+        /* text-shadow: 1px 1px 1px black; */
+        color: black;
+        font-size:2vh;
+        font-family: timesnewsroman;
+        background-color: black;
+        display: none;
+      }
+      #d7:hover{
+        color:white;
+        text-shadow: 1px 1px 1px black;
+      }
+      #d8:hover{
+        color:white;
+        text-shadow: 1px 1px 1px black;
+      }
+      #d9:hover{
+        color:white;
+        text-shadow: 1px 1px 1px black;
+      }
+    </style>
+  </head>
+  <body>
+      <img id=a src="a.png">
+      <img id=b src="b.png">
+      <div>
+        <img id=b1 src="bell.png"><img id=b2 src="bell.png"><img id=b3 src="bell.png">
+        <img id=b4 src="bell.png">
+        <img id=b5 src="bell.png">
+        <img id=b6 src="bell.png">
+        <img id=b7 src="bell.png">
+        <img id=b8 src="bell.png">
+        <img id=b9 src="bell.png">
+        <img id=b10 src="bell.png">
+        <img id=b11 src="bell.png">
+<img id=b12 src="bell.png">
+<img id=b13 src="bell.png">
+<img id=b14 src="bell.png">
+<img id=b15 src="bell.png">
+<img id=b16 src="bell.png">
+<img id=b17 src="bell.png">
+<img id=b18 src="bell.png">
+<img id=b19 src="bell.png">
+<img id=b20 src="bell.png">
+<img id=b21 src="bell.png">
+<img id=b22 src="bell.png">
+<img id=b23 src="bell.png">
+<img id=b24 src="bell.png">
+<img id=b25 src="bell.png">
+<img id=b26 src="bell.png">
+<img id=b27 src="bell.png">
+<img id=b28 src="bell.png">
+<img id=b29 src="bell.png">
+<img id=b30 src="bell.png">
+<img id=b31 src="bell.png">
+<img id=b32 src="bell.png">
+<img id=b33 src="bell.png">
+<img id=b34 src="bell.png">
+<img id=b35 src="bell.png">
+<img id=b36 src="bell.png">
+<img id=b37 src="bell.png">
+<img id=b38 src="bell.png">
+<img id=b39 src="bell.png">
+<img id=b40 src="bell.png">
+<img id=b41 src="bell.png">
+<img id=b42 src="bell.png">
+<img id=b43 src="bell.png">
+<img id=b44 src="bell.png">
+<img id=b45 src="bell.png">
+<img id=b46 src="bell.png">
+<img id=b47 src="bell.png">
+<a href = "https://www.youtube.com/watch?v=hf1DkBQRQj4"> <img id=b48 src="bell.png"> </a>
+<img id=b49 src="bell.png">
+<img id=b50 src="bell.png">
+<img id=b51 src="bell.png">
+<img id=b52 src="bell.png">
+<img id=b53 src="bell.png">
+<img id=b54 src="bell.png">
+<img id=b55 src="bell.png">
+<img id=b56 src="bell.png">
+<img id=b57 src="bell.png">
+<img id=b58 src="bell.png">
+      </div>
+      <img id=p45 src="tangbao.png">
+      <img id=p42 src="tangbao.png">
+      <img id=p44 src="duckk.png">
+      <img id=p43 src="duckk.png">
+      <img id=p41 src="duckk.png">
+      <img id=p39 src="tangbao.png">
+      <img id=p37 src="tangbao.png">
+      <img id=p35 src="tangbao.png">
+      <img id=p40 src="duckk.png">
+      <img id=p38 src="duckk.png">
+      <img id=p36 src="duckk.png">
+      <img id=p34 src="duckk.png">
+      <img id=p33 src="tangbao.png">
+      <img id=p32 src="tangbao.png">
+      <img id=p31 src="duckk.png">
+      <img id=p30 src="tangbao.png">
+      <img id=p29 src="duckk.png">
+      <img id=p28 src="duckk.png">
+      <img id=p27 src="duckk.png">
+      <img id=p26 src="duckk.png">
+      <img id=p25 src="tangbao.png">
+      <img id=p24 src="tangbao.png">
+      <img id=p23 src="tangbao.png">
+      <img id=p22 src="tangbao.png">
+      <img id=p21 src="tangbao.png">
+      <img id=p20 src="tangbao.png">
+      <img id=p19 src="duckk.png">
+      <img id=p18 src="duckk.png">
+      <img id=p17 src="tangbao.png">
+      <img id=p16 src="duckk.png">
+      <img id=p15 src="duckk.png">
+      <img id=p14 src="duckk.png">
+      <img id=p13 src="duckk.png">
+      <img id=p12 src="duckk.png">
+      <img id=p11 src="duckk.png">
+      <img id=p10 src="tangbao.png">
+      <img id=p9 src="tangbao.png">
+      <img id=p8 src="tangbao.png">
+      <img id=p7 src="tangbao.png">
+      <img id=p6 src="tangbao.png">
+      <img id=p5 src="duckk.png">
+      <img id=p4 src="tangbao.png">
+      <img id=p3 src="duckk.png">
+      <img id=p2 src="tangbao.png">
+      <img id=p1 src="duckk.png">
+      <div>
+      </div>
+      <div>
+        <span id=d1>Hey can I sit here? No more empty tables.</span>
+        <span id=d2>Sure.</span>
+        <span id=d3>You're the top scorer in mid-year assesment right?</span>
+        <span id=d4>Yea:)</br>I've heard of you as well.</span>
+        <span id=d5>Haha I never realised I was so famous.</span>
+        <span id=d6>Yea...</span>
+        <span id=d7>Wish I could be as popular as him...</span>
+        <span id=d8>Wait I can ask him how to make more friends! But would that be awkward...?</span>
+        <span id=d9>Maybe he really can give me useful advice! Don't run away, Don't run away, Don't run away, Don't run
+   away, Don't run away ...... </span>
+        <span id=d10>A bit weird to say</br>but I've always envied</br> people as popular as you.</span>
+        <span id=d11>I find it so hard to make friends... </br>Do you mind giving me some advice?</span>
+        <span id=d12>I guess it's just because I share some interests with most people here.</span>
+        <span id=d13>90 percent of this school like k-pop so I can start conversations with them easily.</span>
+        <span id=d14>But to be honest I don't think having many friends is very meaningful.</span>
+        <span id=d15>Friendship <i>can</i> bring happiness but that is just too rare.</br>
+          More often you are forced to share their negative emotions and accpet their strange opinions.</span>
+        <span id=d16>Not to mention betrayal and deceit among friends.</span>
+        <span id=d17>I have this friend who just broke up with his gf. Apparently it was his fault but he still blamed his gf.</span>
+        <span id=d18>I've been mad at him for a long time, but I still have to pretend to support him.</span>
+        <span id=d19>Why not just tell him?</span>
+        <span id=d20>Well tellling him would risk runing our relationship.I literally see him ever day so I don't want that to happen.</span>
+        <span id=d21>I mean I want to be popular but I also want to avoid the negative side-effects of friendship.</br>So I just try to keep my friendships superficial so I don't get affected by them.</span>
+        <span id=d22>Hmm I think I kind of get what you meant.</br>But I'm afraid I can't fully agree to that.</span>
+        <span id=d23>I feel not getting much fulfillment</br>from friendship only means</br>you are not committed enough.</span>
+        <span id=d24>For my friends, I would let them know</br>if I felt like they're not doing</br>something right.</span>
+        <span id=d25>I know that will probably</br>cause fights but I believe</br>most people are very open to</br>kind advice from close friends.</span>
+        <span id=d26>We should consider friends as part</br>of ourselves, so that we grow together.</span>
+        <span id=d27>We should never fail our friends </br>just like we don't want to fail ourselves.</span>
+        <span id=d28>That's just too idealistic.</br>It's just too hard to commit to every friendship, we don't have enough time and effort for that.</span>
+        <span id=d29>But maybe you <i>do</i> have a point, I would probably be happier if I'm more serious about my friendships.</span>
+        <span id=d30>By the way, I don't think you can just 'never fail your friends'.</br>I don't know if understand correctly, but you sounded like a people-pleaser.</span>
+        <span id=d31>Happiness should stem from yourself, don't let others affect it too much.</span>
+        <span id=d32>Yea thanks for telling me that,</br>I'll take note in the future.</span>
+        <span id=d33>Just saying, I overheard others talking about you before.</br>They thought you were content with being alone. But from your words I can tell that's not true.</span>
+        <span id=d34>I never knew that...</span>
+        <span id=d35>That's why people should never</br>make assumptions on others...</span>
+        <span id=d36>But then you rarely approached them because you also made assumptions right???</span>
+        <span id=d37>...True.</br>I always assumed that</br>they were not interested in befriending me.</span>
+        <span id=d38>You see that's the problem. You should have more initiative next time!</span>
+        <span id=d39>Okay... But...</span>
+        <span id=d40>Yea I know it's hard. I guess I can help you a bit.</br>I'll tell my friend from your class about your real thoughts</span>
+        <span id=d41>!!Thank you so much!!</span>
+        <span id=d42>Nah I was the one to say thanks. I haven't doubted the way I make friends for so long.</br>Talking with you makes me reconsider what friends to me.</span>
+        <span id=d43>So, do you want to be my test object?</span>
+        <span id=d44>...What do you mean?</span>
+        <span id=d45>Be my friend.</span>
+        <span id=d46>I'll be serious this time to see whether your have a point.</span>
+        <span id=d47>Bruh that's very sudden... but sure!</span>
+
+      </div>
+  </body>
+</html>

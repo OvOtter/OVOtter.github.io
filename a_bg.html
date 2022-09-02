@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Cormorant+SC:wght@700&family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <script src="bg_a.js"></script>
+    <title>A</title>
+    <style>
+
+      #aa{
+          position:fixed;
+          width:20vw;
+          left:15vw;
+          bottom:45vh;
+      }
+      #friend{
+        position:fixed;
+        display: none;
+        /* opacity:0; */
+        top:10vw;
+        left:7.5vw;
+        width:15vw;
+        opacity: 1;
+        z-index: -1;
+        animation: mymove linear 2s 1;
+      }
+      @keyframes mymove{
+        from {top:-5vw;width:5vw;}
+        to {top:10vw;width:15vw;}
+      }
+      #speaking{
+        position: fixed;
+        display: none;
+        width:2.5vw;
+      }
+      /* #qna:hover{
+        opacity:1;
+      } */
+      @keyframes typing {
+        from {width:0}
+        to{width:100%;}
+      }
+      #speak{
+        position:absolute;
+        top:58vh;
+        left:12.5vw;
+        font-size:2.8vh;
+        width:77vw;
+        font-family: 'Mochiy Pop One', sans-serif;
+        /* text-shadow: 1px 1px 1px black; */
+        letter-spacing: -1px;
+      }
+      #fir,#sec,#thir,#four,#fifth,#six{
+        overflow:hidden;
+        white-space: nowrap;
+        margin: 0 auto;
+        margin-bottom: 1vw;
+        animation:typing 2s steps(40,end);
+        display: none;
+      }
+      #spoiler{
+        letter-spacing: 1px;
+        color: black;
+        font-size:1vw;
+        font-family: cursive;
+        background-color: black;
+      }
+      #spoiler:hover{
+        color:white;
+        text-shadow: 1px 1px 1px black;
+      }
+      #icon{
+        position:fixed;
+        width: 20px;
+        top:15px;
+        left:10px;
+        z-index: 20;
+      }
+      #icon:hover{
+        cursor: help;
+      }
+      #instruction{
+        position:fixed;
+        top:0px;
+        left:33px;
+        background-color:  #cc66ff;
+        box-shadow: 3px 5px  #cc00ff;
+        border-radius: 1vw 1vw 1vw 1vw;
+        color: black;
+        text-shadow: 1px 1px 1px black;
+        display: none;
+        font-size: 15px;
+      }
+    </style>
+
+</head>
+<body>
+    <img id=aa src="a.png">
+    <img id=friend src="friend.png">
+    <img id=speaking src="dog.gif">
+    <img id=icon src = "qn.png">
+    <p id = instruction>Annoying doggie likes to step on the person who is speaking! [click "?" again to discard this]</p>
+    <div id=speak>
+      <p id=fir>&#128557; My girfriend cheated on me... :(</p>
+      <p id=sec>&#128526; OMG??? She must be the most stupid girl in the world!!! You deserve a better gf!!!!!!!</p>
+        <p id=thir>&#128557; Thanks bro... I knew you'd always have my back! But I still... (**shaking and crying**) </p>
+        <p id=four>&#128526; Come on! Let's just get some good food and forget about this. You really need to cheer up.</p>
+        <p id=fifth>&#128557; Okie... Let me go back and get my bag first.</p>
+        <p id=six>&#128526; Sure. <s id=spoiler>Aren't you the one who play games all day without caring about ur gf... But welp, you not gonna change anyway.</s></p>
+        <p id=sev>
+    </div>
+
+</body>
+</html>

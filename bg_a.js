@@ -1,0 +1,46 @@
+$(document).ready(function(){
+  $("#aa").hover(function(){
+    $(this).css("cursor","help");
+  });
+  $("#aa").click(function(){
+    $("#friend").show();
+    $("#friend").hover(function(){
+      $(this).css("cursor","help");
+    });
+    $(this).click(function(){
+      $("#speaking").show();
+      $("#speaking").css("top","7vh");
+      $("#speaking").css("left","25vw");
+    })
+    $(this).hover(function(){
+      $(this).css("cursor","help");
+    });
+  });
+
+  $("#icon").click(function(){
+    $("#instruction").toggle();
+  });
+
+  $("#friend").click(function(){
+    $("#speaking").show();
+    $("#speaking").css("top","15vh");
+    $("#speaking").css("left","13.5vw");
+    $("#fir").show();
+    $("#aa").click(function(){
+      $("#sec").show();
+      $("#friend").click(function(){
+        $("#thir").show();
+        $("#aa").click(function(){
+          $("#four").show();
+          $("#friend").click(function(){
+            $("#fifth").show();
+            $("#aa").click(function(){
+              $("#six").show();
+              $("#friend").hide();
+            });
+          });
+        });
+      });
+    });
+  });
+})
