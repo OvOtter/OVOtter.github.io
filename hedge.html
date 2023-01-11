@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="indexani.js"></script>
+    <title> Hedgehog's Dilemma </title>
+    <link rel = "shortcut icon" href = "shinji.png">
+    <!--https://wiki.evageeks.org/images/thumb/c/ca/26_C343_shinji-grin.jpg/260px-26_C343_shinji-grin.jpg -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Cormorant+SC:wght@700&family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+    <style>
+      body{
+        /* https://pa1.narvii.com/6504/07d5bb1b03e74bd067a28ac0acbc036902ffd91a_hq.gif */
+        background-image: url(star.gif);
+      }
+      img {
+        position: fixed;
+
+        opacity: .9;
+        z-index: -2;
+      }
+      #kaworu{
+        position: fixed;
+        font-size: 100px;
+        font-family: timesnewsroman;
+        letter-spacing: 0px;
+        text-decoration: overline;
+        text-transform: capitalize;
+        width:15vw;
+        right:1vw;
+        font-size: 30px;
+        top:23vh;
+        background: grey;
+        opacity:.2;
+        text-shadow: 20px 2px 2px;
+      }
+      #kaworu:hover{
+        opacity: 1;
+      }
+      #bg{
+        top:0px;
+        left:0px;
+        width: 100vw;
+      }
+      #small{
+        position: fixed;
+        width:20vw;
+        top:50vh;
+        left:0vw;
+        opacity:1;
+        z-index: 50;
+      }
+      #spin{
+        position: fixed;
+        width:12vw;
+        top:3vh;
+        right:2vw;
+        opacity:1;
+        z-index: -1;
+        border-radius: 5vw 5vw 5vw 5vw;
+      }
+      #p{
+        position: fixed;
+        width:10vw;
+        top:70vh;
+        left:4vw;
+        opacity:1;
+        z-index: 5;
+
+      }
+      #p{
+        cursor: move;
+      }
+      #p2{
+        position: fixed;
+        width:10vw;
+        top:25vh;
+        left:4vw;
+        opacity:1;
+      }
+      /* #ubw{
+        position: absolute;
+        color: #990000;
+        background-color: #000000;
+        text-shadow: 1px 1px 1px white;
+        border: 5px double  #000066;
+        border-radius:50px;
+        width: 400px;
+        left: 15vw;
+        top: 20px;
+        font-size: 20px;
+        font-family: 'Cormorant SC', serif;
+        text-align: center;
+      } */
+      #quotes{
+        position: absolute;
+        color: #999999;
+        /* background-color: #000000; */
+        text-shadow: 1px 1px 1px white;
+        border-left: 5px double;
+        border-right: 5px double;
+        /* border: 5px double  #000066; */
+        /* border-radius:50px; */
+        width: 60vw;
+        left: 21vw;
+        top: 50px;
+        font-size: 40px;
+        /* font-family: 'Caveat', cursive; */
+        font-family: papyrus;
+        text-align: left;
+        letter-spacing: -3px;
+        line-height: 1;
+        word-spacing: 20px;
+        opacity: .5;
+        z-index: 1;
+      }
+      #quotes:hover{
+        opacity: 1;
+      }
+      #quills:hover{
+        /* font-size: 40px; */
+
+        text-transform: uppercase;
+      }
+      #source{
+        position: fixed;
+        color: #999999;
+        background-color: #000000;
+        /* text-shadow: 1px 1px 1px white; */
+        border: 5px double  #000066;
+        /* border-radius:50px; */
+        width: 650px;
+        left: 300px;
+        top: 10px;
+        font-size: 20px;
+        font-family: 'Cormorant SC', serif;
+        text-align: center;
+        /* text-decoration: underline overline; */
+      }
+      #q:link{
+        color:black;
+      }
+      #q:visited{
+        color:red;
+      }
+      #q:hover{
+        text-shadow: 2px 2px #3333ff;
+      }
+      #q:active{
+        text-transform: uppercase;
+      }
+      iframe{
+        position: fixed;
+        width: 16vw;
+        height: 8vw;
+        top: 3vh;
+        left: 2vw;
+        border-radius: 4vw 4vw 4vw 4vw;
+        z-index: 10
+      }
+      #hint{
+        position: fixed;
+        font-size: 1vw;
+        color: white;
+        text-decoration:  underline;
+        top:44vh;
+        left:0vw;
+        width:20vw;
+        z-index: 10;
+        font-family: 'Mochiy Pop One', sans-serif;
+        text-align: center;
+      }
+      /* video {
+        position: fixed;
+        width: 200px;
+        height: 100px;
+        bottom:0px;
+        right: 30px;
+        border-radius: 0px 100px 0px 100px;
+        z-index: -1
+      } */
+    </style>
+  </head>
+  <body>
+    <div id = quotes> One cold winter's day, a number of <a id = q href = "https://www.nationalgeographic.com/animals/mammals/facts/porcupines">porcupines</a> huddled together quite closely in order through their mutual warmth to prevent themselves from being frozen. But they soon felt the effect of their <span id = quills> quills </span> on one another, which made them again move apart. Now when the need for warmth once more brought them together, the drawback of the <span id = quills> quills </span> was repeated so that they were tossed between two evils, until they had discovered the proper distance from which they could best tolerate one another. Thus the need for society which springs from the emptiness and monotony of men's lives, drives them together; but their many unpleasant and repulsive qualities and insufferable drawbacks once more drive them apart. The mean distance which they finally discover, and which enables them to endure being together, is politeness and good manners. Whoever does not keep to this, is told in England to 'keep his distance.' By virtue thereof, it is true that the need for mutual warmth will be only imperfectly satisfied, but on the other hand, the prick of the <span id = quills> quills </span> will not be felt. Yet whoever has a great deal of internal warmth of his own will prefer to keep away from society in order to avoid giving or receiving trouble or annoyance.
+    </div>
+    <div id = source><a id = q href = "https://en.wikipedia.org/wiki/Parerga_and_Paralipomena"> Parerga and Paralipomena</a>, Volume II, Chapter XXXI, Section 396
+    </div>
+    <!--https://en.wikipedia.org/wiki/Hedgehog%27s_dilemma-->
+    <div>
+    <iframe src="https://www.youtube.com/embed/dVHdUakiEo4"></iframe>
+    <img id = bg src = "sky.jpg">
+    <img id = small src = "schopenhaue.png">
+    <a href = "bg.html"><img id = p src = "porcupines.png"></a>
+    <img id = p2 src = "porcupines.png">
+    <a href="https://www.reddit.com/r/evangelion/comments/68awof/the_spinning_dancer_end_credits/"> <img id = spin src = "rei.gif"> </a>
+    </div>
+    <div id= kaworu>
+      This is the light of my soul. A sacred territory in which no one may intrude. Aren't you Lilin even aware that your AT field is merely that wall that encloses every mind that exists?
+    </div>
+    <div id = hint>
+      Lost?</br>
+    </div>
+    <!-- <div id = ubw>
+    I am the bone of my sword.<br>
+    <a href = "https://www.youtube.com/watch?v=Cl8ijPGEKO8">Steel is my body</a> and fire is my blood.<br>
+    I have created over a thousand blades.<br>
+    Unaware of loss,<br>
+    Nor aware of gain.<br>
+    Withstood pain to create weapons,<br>
+    waiting for one’s arrival.<br>
+    I have no regrets. This is the only path.<br>
+    My whole life was <a href="https://en.wikipedia.org/wiki/Fate/stay_night:_Unlimited_Blade_Works_(TV_series)"> Unlimited Blade Works</a>.
+    </div> -->
+    <!-- <a href = "https://pubmed.ncbi.nlm.nih.gov/33356979/"> <video loop controls src="rabbit.mp4" type="video/mp4"></video> </a> -->
+  </body>
+</html>
