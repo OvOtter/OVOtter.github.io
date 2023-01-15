@@ -9,13 +9,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Cormorant+SC:wght@700&family=Fredericka+the+Great&family=Italianno&family=Mochiy+Pop+One&family=Playfair+Display&family=Poppins&family=Raleway:wght@600&family=Yatra+One&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
     <!-- Load Font Awesome (an icon library) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
     <script src="https://kit.fontawesome.com/60e20db5cd.js" crossorigin="anonymous"></script>
     <style>
     body,html {
       height: 100%;
       margin: 0;
-      -webkit-text-size-adjust: 100%;
       line-height: 1;
       font-family: 'Raleway', sans-serif;
     }
@@ -241,6 +240,33 @@
       color: grey;
     }
 
+    .columnhi {
+      float: left;
+      width: auto;
+      margin-bottom: 16px;
+      padding-right:40px;
+    }
+    .hi{
+      font-size:14px;
+      position:relative;
+      text-align: center;
+      background-image:url(hi.jpg);
+      background-color: #25274D;
+      background-blend-mode: darken;
+      padding: 10px 60px;
+      color:white;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.5;
+      text-align: left;
+    }
+    .credit{
+      font-size:12px;
+      /* font-weight: 10; */
+      font-family: 'Yatra One', cursive;
+      padding-bottom: 5px;
+      text-align: center;
+    }
+
     .accordion {
       background-color: #25274D;
       background-image: url(2.jpg);
@@ -267,8 +293,8 @@
       background-color: white;
       overflow: hidden;
     }
-    .w3-container{
-      margin:10em 2em;
+    .container{
+      margin:0 0;
     }
     #gradientfont{
       background: -webkit-linear-gradient(#2e9cca, #29648a);
@@ -284,6 +310,24 @@
       background: #EF7C00;
       transform: rotate(2deg);
       border-radius: 20% 25% 20% 24%;
+    }
+
+    #lkmain{
+      color:white;
+      text-decoration:none;
+      margin-top:0;
+      margin-bottom:10px;
+    }
+    #lkmain:hover{
+      text-decoration: overline;
+    }
+
+    #lksub{
+      color:#aaabb8;
+      text-decoration:none;
+    }
+    #lksub:hover{
+      color:white;
     }
     .parallax {
       /* The image used */
@@ -306,16 +350,6 @@
     @keyframes flyfromleft {
       0%{opacity: 0;}
       100%{opacity: 1.0;}
-    }
-    .hi{
-      position:relative;
-      text-align: center;
-      font-size:15px;
-      /* font-weight: bold; */
-      font-family: 'Fredericka the Great', cursive;
-      background-image:url(hi.jpg);
-      padding: 3px;
-      color:white;
     }
     </style>
   </head>
@@ -345,7 +379,7 @@
     <div class="content">
       <div class="parallax"></div>
 
-      <div class="w3-container" >
+      <div class="container" >
         <div id="mission">
             <br>
         </div>
@@ -355,7 +389,7 @@
             <p>More specifically, CeNCE is focused on preparing (i) students at the secondary and junior college level for Informatics Olympiad competitions, including the National Olympiad in Informatics (NOI), the Asia-Pacific Informatics Olympiad (APIO), and the International Olympiad in Informatics (IOI), as well as preparing (ii) students at the National University of Singapore (NUS) for the International Collegiate Programming Contest (ICPC). Refer to <a href="contests.html" id="lk">Contests</a> for more information about the mentioned competitions.</p>
         </div>
       </div>
-      <div class="w3-container">
+      <div class="container">
         <div id="people">
             <br><br>
         </div>
@@ -388,7 +422,7 @@
           </div>
           <div class="column">
             <div class="card">
-              <img src="sample1.png" style="width:100%">
+              <img src="laizs.jpg" style="width:100%">
               <div class="container">
                 <h3 style = "font-family:Playfair Display, Times, serif">Mr Lai Zit Seng</h3>
                 <p class="title">Technical Director (Contests)</p>
@@ -431,7 +465,7 @@
       </div>
 
 
-      <div class="w3-container">
+      <div class="container">
         <div id="partners">
           <br>
         </div>
@@ -443,13 +477,13 @@
         </div>
       </div>
 
-      <div class="w3-container">
+      <div class="container">
         <div id="contact">
           <br>
         </div>
         <div class="descriptionmiddle">
           <h1 style = "font-family:Playfair Display, Times, serif;text-decoration:overline;font-size:45px;padding-top:10px">Contact</h1>
-          <p><i class="fa-solid fa-user"></i> Tan Ai Lian Vivian <i class="fa-solid fa-envelope"></i> comtalv@nus.edu.sg <i class="fa-solid fa-phone"></i> +6565161370</p>
+          <p><i class="fa-solid fa-user"></i> Tan Ai Lian Vivian<br><i class="fa-solid fa-envelope"></i> comtalv@nus.edu.sg<br><i class="fa-solid fa-phone"></i> +6565161370</p>
           <button class="accordion"><i class="fa-solid fa-location-dot"></i> Address</button>
             <div class="panel">
               <p>School of Computing<br>
@@ -465,10 +499,42 @@
         </div>
       </div>
 
-      <div class="hi">
+    </div>
+
+    <div class="hi" style="margin-top:20px">
+      <div class="row">
+        <div class="columnhi">
+          <h3 style="margin-bottom:5px;font-weight:lighter"><a href="index.html" id="lkmain">CeNCE</a></h3>
+             <a href="index.html#news" id="lksub">News</a>
+          <h3 style="margin-bottom:5px;font-weight:lighter"><a href="about.html" id="lkmain">About</a></h3>
+             <a href="aobut.html#mission" id="lksub">Mission</a><br>
+             <a href="about.html#people" id="lksub">People</a><br>
+             <a href="about.html#partners" id="lksub">Partners</a><br>
+             <a href="about.html#contact" id="lksub">Contact</a>
+        </div>
+        <div class="columnhi">
+          <h3 style="margin-bottom:5px;font-weight:lighter"><a href="programmes.html" id="lkmain">Programmes</a></h3>
+            <a href="programmes.html#mod1" id="lksub">Introduction to Computational Thinking and Problem Solving</a><br>
+            <a href="programmes.html#mod2" id="lksub">Introductory Programming with Python</a><br>
+            <a href="programmes.html#mod3" id="lksub">Programming with C/C++</a><br>
+            <a href="programmes.html#mod4" id="lksub">Introduction to Data Structures and Algorithms</a><br>
+            <a href="programmes.html#mod5" id="lksub">Introduction to Competitive Programming</a><br>
+          <h3 style="margin-bottom:5px;font-weight:lighter"><a href="contests.html" id="lkmain">Contests</a></h3>
+
+        </div>
+        <div class="columnhi">
+          <h3 style="margin-bottom:5px;font-weight:lighter">NUS School of Computing</h3>
+          <span style="color:#aaabb8">School of Computing<br>
+National University of Singapore<br>
+Computing 1<br>
+13 Computing Drive<br>
+Singapore 117417<br>
+Republic of Singapore</span>
+        </div>
+      </div>
+      <div class="credit">
         Built with <i class="fa-solid fa-otter"></i> by Shen Zihan.
       </div>
-
     </div>
 
     <script>

@@ -6,7 +6,7 @@
     <!-- Load fonts from Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Cormorant+SC:wght@700&family=Fredericka+the+Great&family=Italianno&family=Mochiy+Pop+One&family=Moon+Dance&family=Playfair+Display&family=Poppins&family=Raleway:wght@600&family=Yatra+One&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Cormorant+SC:wght@700&family=Fredericka+the+Great&family=Italianno&family=Mochiy+Pop+One&family=Playfair+Display&family=Poppins&family=Raleway:wght@600&family=Yatra+One&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
     <!-- Load Font Awesome (an icon library) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/60e20db5cd.js" crossorigin="anonymous"></script>
@@ -15,7 +15,6 @@
       height: 100%;
       margin: 0;
       font-family: 'Raleway', sans-serif;
-      -webkit-text-size-adjust: 100%;
     }
 
     .bgimg1 {
@@ -110,18 +109,6 @@
       display: none;
     }
 
-    .hi{
-      position:relative;
-      text-align: center;
-      font-size:15px;
-      /* font-weight: bold; */
-      font-family: 'Fredericka the Great', cursive;
-      background-image:url(hi.jpg);
-      padding: 3px;
-      color:white;
-      bottom:0;
-    }
-
     @media screen and (max-width: 700px) {
       .topnav a:not(:first-child) {display: none;}
       .topnav a.icon {
@@ -144,21 +131,117 @@
       }
     }
 
+    .row{
+    }
+
+    .container::after, .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
     .content {
+      margin-left: 30px;
+      margin-right:30px;
       position: relative;
       padding-top: 50px;
       text-align: center;
       font-size: 20px;
-      background: -webkit-linear-gradient(#2e9cca, #25274D);-webkit-background-clip: text;-webkit-text-fill-color: transparent;font-weight: 600;
       animation: flyfromleft;
       animation-duration:1s;
       animation-fill-mode: forwards;
+      color:#25274D;
+    }
+    .hi{
+      font-size:14px;
+      position:relative;
+      text-align: center;
+      background-image:url(hi.jpg);
+      background-color: #25274D;
+      background-blend-mode: darken;
+      padding: 10px 60px;
+      color:white;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.5;
+      text-align: left;
+    }
 
+    .columnhi {
+      float: left;
+      width: auto;
+      margin-bottom: 16px;
+      padding-right:40px;
+    }
+    .credit{
+      font-size:12px;
+      /* font-weight: 10; */
+      font-family: 'Yatra One', cursive;
+      padding-bottom: 5px;
+      text-align: center;
+      position: relative;
+    }
+
+    #lkmain{
+      color:white;
+      text-decoration:none;
+      margin-top:0;
+      margin-bottom:10px;
+    }
+    #lkmain:hover{
+      text-decoration: overline;
+    }
+
+    #lksub{
+      color:#aaabb8;
+      text-decoration:none;
+    }
+    #lksub:hover{
+      color:white;
+    }
+
+    .accordion {
+      background-color: #25274D;
+      background-size: cover;
+      background-blend-mode: darken;
+      cursor: pointer;
+      padding: 10px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      border-radius: 5px;
+      outline: none;
+      transition: 0.4s;
+      color:white;
+      margin-bottom: 10px;
+    }
+
+    .accordion:hover {
+      background-color: #ccc;
+      color:#25274D;
+    }
+
+    .panel {
+      padding: 0 18px;
+      display: none;
+      background-color: white;
+      overflow: hidden;
+      text-align:left;
+      font-family: Roboto, Arial, sans-serif;
+      line-height: 1.5;
     }
 
     @keyframes flyfromleft {
       0%{left:-30px;opacity: 0;}
       100%{left:0px;opacity: 1.0;}
+    }
+    #lk{
+      color:#25274D;
+      text-decoration: none;
+      padding-left: 5pt;
+      padding-right: 5pt;
+      background: #EF7C00;
+      transform: rotate(2deg);
+      border-radius: 20% 25% 20% 24%;
     }
 
     .sticky {
@@ -195,14 +278,138 @@
       </a>
     </div>
     <div class="content">
-        <img src="pathway.jpg" width=600px alt="flowchart">
+        <img src="pathway.png" width=600px alt="flowchart" style="margin-bottom:30px">
+        <button class="accordion" style = "font-family:Playfair Display, Times, serif;font-size:20px">Introduction to Computational Thinking and Problem Solving</button>
+        <div class="panel" id="mod1">
+          <ul>
+            <li>Introduces computational thinking (CT) as problem-solving
+              <ul>
+                <li>Focuses on Polya’s Problem-solving Process (PPSP)</li>
+                <li>Emphasis on problem formulation and basic representations</li>
+                <li>Leverages CT ideas – e.g., solutions via search/optimisation (AI)</li>
+                <li>Emphasis on problem-solving as separate to implementation</li>
+                <li>Entirely syntax agnostic - code examples in multiple languages</li>
+              </ul>
+            </li>
+            <li>Theory-based, examination-style competition</li>
+          </ul>
+        </div>
+
+        <button class="accordion" style = "font-family:Playfair Display, Times, serif;font-size:20px">Introductory Programming with Python </button>
+        <div class="panel" id="mod2">
+          <ul>
+            <li>Consolidates problem-solving by focusing on implementation
+              <ul>
+                <li>Introduces Python syntax</li>
+                <li>Translating problem solutions to code</li>
+                <li>Begin to focus on complexity and practical efficiencies</li>
+                <li>Mastery of software development tools and skills</li>
+              </ul>
+            </li>
+            <li>Practical-based examination-style competition</li>
+          </ul>
+        </div>
+
+        <button class="accordion" style = "font-family:Playfair Display, Times, serif;font-size:20px">Programming with C/C++</button>
+        <div class="panel" id="mod3">
+          <ul>
+            <li>Extending student knowledge to include explicit memory management
+              <ul>
+                <li>Introduces C/C++ syntax</li>
+                <li>Emphasis on memory management</li>
+                <li>Even greater focus on complexity and practical efficiencies</li>
+              </ul>
+            </li>
+            <li>Practical-based examination-style competition</li>
+          </ul>
+        </div>
+
+        <button class="accordion" style = "font-family:Playfair Display, Times, serif;font-size:20px">Introduction to Data Structures and Algorithms</button>
+        <div class="panel" id="mod4">
+          <ul>
+            <li>Adding building blocks for problem solving
+              <ul>
+                <li>Introduces fundamental Data Structures and Algorithms</li>
+                <li>Time and space complexities are now an integral part of problem solving</li>
+                <li>Using the latest C++ standard and libraries</li>
+              </ul>
+            </li>
+            <li>Practical-based examination-style competition</li>
+          </ul>
+        </div>
+
+        <button class="accordion" style = "font-family:Playfair Display, Times, serif;font-size:20px">Introduction to Competitive Programming</button>
+        <div class="panel" id="mod5">
+          <ul>
+            <li>Preparing students for actual informatics competitions
+              <ul>
+                <li>Introduces more advanced algorithmic problem-solving techniques</li>
+                <li>Introduces competitive problem solving under time pressure</li>
+                <li>Gaining experience via weekly mini competitions</li>
+              </ul>
+            </li>
+            <li>Content from (the first half of) <a href="https://www.comp.nus.edu.sg/~stevenha/cs3233.html" id="lk">CS3233</a>
+              <ul>
+                <li>To be conducted from January to early March each year before NOI</li>
+              </ul>
+            </li>
+            <li>Competitive programming competition</li>
+          </ul>
+        </div>
+
         <p>More details about the programmes will be updated in the future.</p>
       </div>
-    </div>
-    <!-- <div class="hi">
-      Built with <i class="fa-solid fa-otter"></i> by Shen Zihan.
-    </div> -->
+
+      <div class="hi">
+        <div class="row">
+          <div class="columnhi">
+            <h3 style="margin-bottom:5px;font-weight:lighter"><a href="index.html" id="lkmain">CeNCE</a></h3>
+               <a href="index.html#news" id="lksub">News</a>
+            <h3 style="margin-bottom:5px;font-weight:lighter"><a href="about.html" id="lkmain">About</a></h3>
+               <a href="aobut.html#mission" id="lksub">Mission</a><br>
+               <a href="about.html#people" id="lksub">People</a><br>
+               <a href="about.html#partners" id="lksub">Partners</a><br>
+               <a href="about.html#contact" id="lksub">Contact</a>
+          </div>
+          <div class="columnhi">
+            <h3 style="margin-bottom:5px;font-weight:lighter"><a href="programmes.html" id="lkmain">Programmes</a></h3>
+              <a href="programmes.html#mod1" id="lksub">Introduction to Computational Thinking and Problem Solving</a><br>
+              <a href="programmes.html#mod2" id="lksub">Introductory Programming with Python</a><br>
+              <a href="programmes.html#mod3" id="lksub">Programming with C/C++</a><br>
+              <a href="programmes.html#mod4" id="lksub">Introduction to Data Structures and Algorithms</a><br>
+              <a href="programmes.html#mod5" id="lksub">Introduction to Competitive Programming</a><br>
+            <h3 style="margin-bottom:5px;font-weight:lighter"><a href="contests.html" id="lkmain">Contests</a></h3>
+
+          </div>
+          <div class="columnhi">
+            <h3 style="margin-bottom:5px;font-weight:lighter">NUS School of Computing</h3>
+            <span style="color:#aaabb8">School of Computing<br>
+  National University of Singapore<br>
+  Computing 1<br>
+  13 Computing Drive<br>
+  Singapore 117417<br>
+  Republic of Singapore</span>
+          </div>
+        </div>
+        <div class="credit">
+          Built with <i class="fa-solid fa-otter"></i> by Shen Zihan.
+        </div>
+      </div>
     <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
     function ResponsiveDropdown() {
       var x = document.getElementById("myTopnav");
       if (x.className == "topnav") {

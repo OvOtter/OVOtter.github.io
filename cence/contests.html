@@ -31,6 +31,33 @@
         /* position: relative; */
       }
 
+      .columnhi {
+        float: left;
+        width: auto;
+        margin-bottom: 16px;
+        padding-right:40px;
+      }
+      .hi{
+        font-size:14px;
+        position:relative;
+        text-align: center;
+        background-image:url(hi.jpg);
+        background-color: #25274D;
+        background-blend-mode: darken;
+        padding: 10px 60px;
+        color:white;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.5;
+        text-align: left;
+      }
+      .credit{
+        font-size:12px;
+        /* font-weight: 10; */
+        font-family: 'Yatra One', cursive;
+        padding-bottom: 5px;
+        text-align: center;
+      }
+
       .topnav {
         overflow: hidden; /*hide topnav on small screens*/
         background-color: #303C6C;
@@ -131,6 +158,15 @@
           display: block;
           text-align: left;
         }
+      }
+
+      .row{
+      }
+
+      .container::after, .row::after {
+        content: "";
+        clear: both;
+        display: table;
       }
 
       .content {
@@ -321,14 +357,22 @@ background: linear-gradient(0deg, rgba(37,39,77,1) 0%, rgba(48,60,108,1) 100%);
       		transform:         translateY(-5px)
       	}
       }
-      .hi{
-        position:relative;
-        text-align: center;
-        font-size:15px;
-        /* font-weight: bold; */
-        font-family: 'Fredericka the Great', cursive;
-        background-image:url(hi.jpg);
-        padding: 3px;
+
+      #lkmain{
+        color:white;
+        text-decoration:none;
+        margin-top:0;
+        margin-bottom:10px;
+      }
+      #lkmain:hover{
+        text-decoration: overline;
+      }
+
+      #lksub{
+        color:#aaabb8;
+        text-decoration:none;
+      }
+      #lksub:hover{
         color:white;
       }
     </style>
@@ -421,9 +465,41 @@ background: linear-gradient(0deg, rgba(37,39,77,1) 0%, rgba(48,60,108,1) 100%);
     </div>
 
     <div class="hi">
-      Built with <i class="fa-solid fa-otter"></i> by Shen Zihan.
+      <div class="row">
+        <div class="columnhi">
+          <h3 style="margin-bottom:5px;font-weight:lighter"><a href="index.html" id="lkmain">CeNCE</a></h3>
+             <a href="index.html#news" id="lksub">News</a>
+          <h3 style="margin-bottom:5px;font-weight:lighter"><a href="about.html" id="lkmain">About</a></h3>
+             <a href="aobut.html#mission" id="lksub">Mission</a><br>
+             <a href="about.html#people" id="lksub">People</a><br>
+             <a href="about.html#partners" id="lksub">Partners</a><br>
+             <a href="about.html#contact" id="lksub">Contact</a>
+        </div>
+        <div class="columnhi">
+          <h3 style="margin-bottom:5px;font-weight:lighter"><a href="programmes.html" id="lkmain">Programmes</a></h3>
+            <a href="programmes.html#mod1" id="lksub">Introduction to Computational Thinking and Problem Solving</a><br>
+            <a href="programmes.html#mod2" id="lksub">Introductory Programming with Python</a><br>
+            <a href="programmes.html#mod3" id="lksub">Programming with C/C++</a><br>
+            <a href="programmes.html#mod4" id="lksub">Introduction to Data Structures and Algorithms</a><br>
+            <a href="programmes.html#mod5" id="lksub">Introduction to Competitive Programming</a><br>
+          <h3 style="margin-bottom:5px;font-weight:lighter"><a href="contests.html" id="lkmain">Contests</a></h3>
+
+        </div>
+        <div class="columnhi">
+          <h3 style="margin-bottom:5px;font-weight:lighter">NUS School of Computing</h3>
+          <span style="color:#aaabb8">School of Computing<br>
+National University of Singapore<br>
+Computing 1<br>
+13 Computing Drive<br>
+Singapore 117417<br>
+Republic of Singapore</span>
+        </div>
+      </div>
+      <div class="credit">
+        Built with <i class="fa-solid fa-otter"></i> by Shen Zihan.
+      </div>
     </div>
-    
+
     <script>
     function ResponsiveDropdown() {
       var x = document.getElementById("myTopnav");
